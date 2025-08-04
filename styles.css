@@ -176,6 +176,10 @@ nav {
   .contact-details {
     align-items: flex-start;
   }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 /* Dropdown styles remain unchanged */
