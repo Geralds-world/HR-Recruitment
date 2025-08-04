@@ -122,6 +122,62 @@ nav {
   color: #333;
 }
 
+/* Mobile contact info styles */
+.mobile-contact-info {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-info {
+    display: none;
+  }
+
+  .mobile-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    margin: 1.5rem 0 0 0;
+    padding: 0 1rem;
+  }
+
+  .contact-item {
+    min-width: unset;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f4e9dc;
+  }
+
+  .contact-item:last-child {
+    border-bottom: none;
+  }
+
+  .contact-item .icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .contact-details {
+    align-items: flex-start;
+  }
+}
+
 /* Dropdown styles remain unchanged */
 .dropdown {
   position: relative;
@@ -223,7 +279,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1.2rem; /* Even closer images to text */
+  gap: 1.2rem;
 }
 
 /* Unique diagonal cascade layout for images */
@@ -344,42 +400,4 @@ footer {
   background: #e6e4e4;
   font-size: 0.9rem;
   color: #555;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .contact-info {
-    justify-content: flex-start;
-    margin-top: 1rem;
-  }
-
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: none;
-  }
-
-  .dropdown.active .dropdown-menu {
-    display: flex;
-  }
 }
